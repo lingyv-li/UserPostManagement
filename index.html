@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Post Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+<div class="header shadow">
+    <span class="title">User Post Management System</span>
+</div>
+
+<div class="container">
+    <a href="edit.html">
+        <button class="shadow" id="add">Add</button>
+    </a>
+
+    <div id="item-list">
+    </div>
+</div>
+<div class="modal hidden" id="delete-confirm">
+    <div class="modal-content">
+        <div class="modal-header">
+            Confirm delete
+            <span class="close" style="float: right">&times;</span>
+        </div>
+        <hr>
+        <div class="modal-body">
+            <p>Are you sure you want to delete the post <span id="modal-post-name"></span>?</p>
+        </div>
+        <hr>
+        <div class="modal-footer">
+            <button id="confirm">Confirm</button>
+            <button class="close">Cancel</button>
+        </div>
+    </div>
+
+</div>
+<div class="hidden">
+    <!-- Hidden and only for javascript template parser -->
+    <div id="item-template">
+        <div class="block shadow">
+            <div class="banner">
+                <img class="banner-img" src="{{img}}">
+                <h1 class="banner-heading">{{title}}</h1>
+            </div>
+            <div class="description">
+                Content:
+                <p class="content">{{content}}</p>
+                <hr>
+                <div>
+
+                </div>
+                Published at: <span class="published-at">{{publishedAt}}</span><br>
+                Author: <span class="publisher">{{publisher}}</span>
+            </div>
+            <div class="operations">
+                <a href="edit.html?id={{i}}">
+                    <button class="shadow" name="edit" data-item-id="{{i}}">Edit</button>
+                </a>
+                <button class="shadow" name="delete" data-item-id="{{i}}">Delete</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+    ListPage.init();
+</script>
+</body>
+</html>

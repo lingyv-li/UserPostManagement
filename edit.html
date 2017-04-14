@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Post Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+<div class="header shadow">
+    <span class="title">User Post Management System</span>
+</div>
+
+<div class="container">
+    <div class="block shadow">
+        <form name="post-form" id="post-form">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="Title">
+            </div>
+            <div class="form-control">
+                <label for="img">Image Url</label>
+                <input type="text" name="img" id="img" placeholder="Image">
+            </div>
+
+            <div class="form-control">
+                <label for="content">Content</label>
+                <textarea name="content" id="content" placeholder="Content"></textarea>
+            </div>
+            <div class="form-control">
+                <label for="publisher">Publisher Name</label>
+                <input type="text" name="publisher" id="publisher" placeholder="Publisher">
+            </div>
+            <div class="form-control">
+                <button class="shadow" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+    EditPage.init();
+</script>
+</body>
+</html>
